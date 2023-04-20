@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import "./index.css";
 import { getList } from "../../services/request";
-import { ListCard } from "../../Components";
+import { Button, ListRender, Loader, Modal } from "../../Components";
 
 export const ListScreen = () => {
+  const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(true);
   const [listData, setListData] = useState([]);
 
@@ -19,29 +20,33 @@ export const ListScreen = () => {
     loadListItems();
   }, []);
 
+  const onClickAddButton = () => {
+    setModalVisible(true);
+  };
+
+  const onCloseModal = () => [setModalVisible(false)];
+
   return (
     <div className="list-screen-container">
       <div className="list-screen-content-container">
         <div className="list-screen-header">
-          <img
-            className="logo-image"
-            src="images/logo.png"
-            alt="supermarket-list-logo"
-          />
-          <h1>Lista Supermercado</h1>
+          <div className="list-screen-title-container">
+            <img
+              className="logo-image"
+              src="images/logo.png"
+              alt="supermarket-list-logo"
+            />
+            <h1 className="list-screen-header-title">Lista Supermercado</h1>
+          </div>
+          <div className="list-screen-header-button-container">
+            <Button onClick={onClickAddButton}>Adicionar</Button>
+          </div>
         </div>
         <div className="list-screen-list-container">
-          {loading && <h3>Carregando...</h3>}
-          {!loading && listData?.length > 0 ? (
-            listData.map((item) => <ListCard key={item._id} item={item} />)
-          ) : (
-            <h3>
-              Sua lista está vazia, adicione um novo item clicando no botão de
-              "Adicionar"
-            </h3>
-          )}
+          {loading ? <Loader /> : <ListRender list={listData} />}
         </div>
       </div>
+      {modalVisible && <Modal onClose={onCloseModal} />}
     </div>
   );
 };
