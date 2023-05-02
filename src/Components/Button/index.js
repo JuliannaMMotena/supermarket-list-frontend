@@ -10,7 +10,7 @@ export const Button = ({ children, onClick, variant, icon }) => {
     >
       {icon && (
         <img
-          src={`/images/${icon}.jpg`}
+          src={`/images/${icon}.svg`}
           className="button-icon"
           alt={`supermarket_icon_${icon}`}
         />

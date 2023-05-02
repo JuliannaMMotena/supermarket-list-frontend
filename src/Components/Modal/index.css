@@ -38,7 +38,7 @@
   width: 24px;
   background-color: transparent;
   border: 0px;
-  background-image: url("../../../public/Images/close.jpg");
+  background-image: url("../../../public/Images/close.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -52,4 +52,21 @@
   width: 100%;
   justify-content: space-between;
   margin-top: 52vh;
+}
+
+@media screen and (max-width: 830px) {
+  .modal-content {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .modal-content {
+    width: 100vw;
+  }
+
+  .buttons-container {
+    height: 18vh;
+    margin-top: 42vh;
+  }
 }
