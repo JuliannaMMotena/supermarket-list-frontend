@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Title = styled.h1`
-  max-width: ${({ mw }) => mwn || 320}px;
+  max-width: ${({ mw }) => mw || 320}px;
   font-weight: bold;
-  text-align: ${({ align }) => align || 'center'}px;
+  text-align: ${({ align }) => align || 'center'};
   font-size: ${({ fontSize }) => fontSize || 24}px;
   line-height: ${({ lineHeight }) => lineHeight || 22}px;
   color: black;
@@ -17,7 +17,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h3`
   max-width: ${({ mw }) => mw || 320}px;
-  text-align: ${({ align }) => align || 'center'}px;
+  text-align: ${({ align }) => align || 'center'};
   font-size: ${({ fontSize }) => fontSize || 16}px;
   font-weight: 500;
   margin: 0px;
@@ -32,7 +32,7 @@ export const Subtitle = styled.h3`
 `
 
 export const SmallText = styled.span`
-  text-align: ${({ align }) => align || 'center'}px;
+  text-align: ${({ align }) => align || 'center'};
   font-size: ${({ fontSize }) => fontSize || 16}px;
   margin-bottom: ${({ mb }) => mb || 0}px;
   font-weight: ${({ fontWeight }) => fontWeight || 500};
