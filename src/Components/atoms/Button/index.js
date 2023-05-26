@@ -5,7 +5,7 @@ export const Button = ({ children, onClick, variant, icon }) => {
     <ButtonContainer onClick={onClick} outline={variant === 'outline'}>
       {icon && (
         <ButtonIcon
-          src={`/images/${icon}.svg`}
+          src={`/Images/${icon}.svg`}
           alt={`supermarket_icon_${icon}`}
         />
       )}
