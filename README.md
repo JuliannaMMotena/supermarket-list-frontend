@@ -10,14 +10,13 @@ It was used the Atomic Design Concept to organize the components.
 
 ## Link to Production App:
 
-https://juliannammotena.github.io/supermarket-list-frontend/
+supermarket-list-frontend-bxzc.vercel.app
 
 ## Technologies Used
 
 - React.js
 - Styled Components
 - Axios
-- Eslint
 - Prettier
 - Absolute Imports
 

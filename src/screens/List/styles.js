@@ -41,7 +41,7 @@ export const TitleContainer = styled.div`
 `
 
 export const LogoImage = styled.img.attrs({
-  src: '/images/logo.png',
+  src: '/Images/logo.png',
   alt: 'supermarket-list-logo'
 })`
   width: 72px;

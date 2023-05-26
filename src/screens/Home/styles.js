@@ -31,7 +31,7 @@ export const ContentContainer = styled.div`
 `
 
 export const BagImage = styled.img.attrs({
-  src: '/images/shopping-bag.svg',
+  src: '/Images/shopping-bag.svg',
   alt: 'shopping-back'
 })`
   width: 220px;

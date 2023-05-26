@@ -39,7 +39,7 @@ export const ArrowIconContainer = styled.div`
 `
 
 export const ArrowIcon = styled.img.attrs({
-  src: '/images/arrow.svg',
+  src: '/Images/arrow.svg',
   alt: 'arrow-icon'
 })`
   width: 6px;
